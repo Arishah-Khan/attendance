@@ -111,11 +111,11 @@ export default function AttendanceCalendar() {
         inputLabel: "Student ID (between 1 and 10)",
         inputValidator: (value) => {
           if (!value || isNaN(value)) {
-            return "❌ Please enter a valid numeric ID!";
+            return " Please enter a valid numeric ID!";
           }
           const numId = parseInt(value, 10);
           if (numId < 1 || numId > 10) {
-            return "❌ ID must be between 1 and 10!";
+            return " ID must be between 1 and 10!";
           }
           studentId = numId;
           return null;
@@ -132,7 +132,7 @@ export default function AttendanceCalendar() {
       if (student) {
         break;
       } else {
-        Swal.fire("❌ Invalid Student ID!", "Please enter a correct ID.", "error");
+        Swal.fire(" Invalid Student ID!", "Please enter a correct ID.", "error");
       }
     }
 
